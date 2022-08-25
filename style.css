@@ -254,6 +254,36 @@ button:hover {
   -moz-background-clip: text;
 }
 
+.career-timeline-container {
+  display: block;
+  position: relative;
+}
+
+.career-timeline-container::before {
+  display: block;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--color-gradient);
+  z-index: -1;
+}
+
+.career-timeline-container .timeline-list .club {
+  margin: 1rem;
+}
+
+.club-career {
+  font-size: 1rem;
+  font-family: "Work Sans", sans-serif;
+}
+
+.club-career:hover {
+  background: var(--color-gradient);
+}
+
 @media screen and (max-width: 600px) {
   .container {
     grid-template-columns: 1fr;
@@ -266,10 +296,22 @@ button:hover {
   .main-navigation {
     display: none;
   }
-
-  /* .author-profile {
+/* 
+  .aside-toggle {
     position: absolute;
+    right: 0;
+    padding: 1rem;
     background: var(--color-gradient);
+    z-index: 10000;
+  }
+
+  .author-profile {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--color-primary);
     z-index: 1000;
     transform: translateX(100%);
   } */
