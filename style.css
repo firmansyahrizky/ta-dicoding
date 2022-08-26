@@ -31,8 +31,13 @@ body,
 html {
   font-family: "Work Sans", sans-serif;
   background: var(--color-primary);
+  background-image:  url(assets/main-bg.jpg);
+  background-size:  cover;
+  background-blend-mode: multiply;
+  background-position: center;
   color: var(--color-white);
 }
+
 
 button,
 input,
@@ -62,6 +67,7 @@ header {
   align-items: center;
   padding: 1rem 2rem;
   background-color: var(--color-primary);
+  
 }
 
 .main-navigation {

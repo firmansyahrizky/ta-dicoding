@@ -16,7 +16,12 @@ const playerData = {
     month: "December",
     year: 1992,
   },
-  age: "",
+  age: function () {
+    const currentDate = new Date();
+    const currentYear = currentDate.getFullYear();
+    const playerAge = currentYear - this.birth.year;
+    return playerAge;
+  },
   height: 170, //in centimeter
   positions: ["Attacking Midfield, Midfield"],
   club: "Nottingham Forrest FC",
@@ -59,13 +64,6 @@ On 27 February 2014, Lingard joined another Championship club, Brighton & Hove A
   ]
 };
 
-function ageCalculator() {
-  const currentYear = new Date().getFullYear();
-  const playerAge = currentYear - playerData.birth.year;
-  playerData.age = playerAge;
-}
-
-function modifyProfileTable() {
   profileTable.innerHTML = `
     
     <table class="profile-table" cellspacing=0>
@@ -81,7 +79,7 @@ function modifyProfileTable() {
             </tr>
             <tr>
                 <th>Date of Birth:</th>
-                <td>${playerData.birth.date}, ${playerData.birth.month} ${playerData.birth.year} <span class="player-age">(age ${playerData.age})</span></td>
+                <td>${playerData.birth.date}, ${playerData.birth.month} ${playerData.birth.year} <span class="player-age">(age ${playerData.age()})</span></td>
             </tr>
             <tr>
                 <th>Height:</th>
@@ -102,9 +100,8 @@ function modifyProfileTable() {
         </tbody>    
     </table>   
     `;
-}
 
-function tabDetailController() {
+
   //how tab works:
   //recognize the clicked button
   //match the clicked button with section detail
@@ -166,11 +163,4 @@ function tabDetailController() {
       }
     })
   );
-}
 
-tabDetailController();
-ageCalculator();
-modifyProfileTable();
-
-
-playerData.career.map(timeline => console.log(timeline))
