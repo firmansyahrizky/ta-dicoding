@@ -45,9 +45,7 @@ const playerData = {
     {
       club: "Manchester United",
       season: "2013-2014",
-      description: `Lingard was selected in the 19-man squad for Manchester United's 2013 pre-season tour. He scored his first two goals for United in a 5–1 friendly win against the A-League All Stars in Sydney on 20 July, the first of which was the club's first goal under new manager David Moyes. After the match, he said "I believe in myself but I have to start believing in myself more".[23] He also scored against Yokohama F. Marinos[24] and Kitchee SC to finish the tour as top scorer with four goals in as many matches. Although he had hoped to "skip the loan stage this time and break straight through" at Manchester United, Lingard joined Birmingham City on a month's loan on 19 September, and went straight into the starting eleven for the Championship match against Sheffield Wednesday at St Andrew's two days later. He opened the scoring after 20 minutes with his first goal in senior football when goalkeeper Chris Kirkland parried Chris Burke's shot, completed his hat-trick 13 minutes later, and scored a fourth in the second half to secure a 4–1 win. Lingard was unavailable for Birmingham's League Cup third-round tie because Manchester United did not want him cup-tied,[28] then in his third league match, he made up for missing a penalty, awarded when he was fouled apparently outside the area, with an 89th-minute header to complete a 4–0 defeat of Millwall. Agreement was reached to extend Lingard's loan until 14 December, but he then missed three matches while receiving treatment at Manchester United for a knee injury.[31] The loan was further extended, to 1 January 2014, but Lingard was suspended for the last two matches of the spell. He was sent off during a match against Wigan Athletic on 26 December for a lunge on Jordi Gómez immediately after being refused a free kick when he appeared to be fouled. Although Birmingham hoped to extend the loan, Lingard returned to Manchester United and was an unused substitute in the match against Swansea City on 11 January.
-On 27 February 2014, Lingard joined another Championship club, Brighton & Hove Albion, on a 93-day loan. He scored his first goal for the club on 8 April, in a 4–1 win against former club Leicester City, who had sealed promotion to the Premier League days earlier. While with Albion, Lingard played 17 times, including in the Championship play-offs, and scored 4 goals.
-      `
+      description: `Lingard was selected in the 19-man squad for Manchester United's 2013 pre-season tour. He scored his first two goals for United in a 5–1 friendly win against the A-League All Stars in Sydney on 20 July, the first of which was the club's first goal under new manager David Moyes. After the match, he said "I believe in myself but I have to start believing in myself more".[23] He also scored against Yokohama F. Marinos[24] and Kitchee SC to finish the tour as top scorer with four goals in as many matches. Although he had hoped to "skip the loan stage this time and break straight through" at Manchester United, Lingard joined Birmingham City on a month's loan on 19 September, and went straight into the starting eleven for the Championship match against Sheffield Wednesday at St Andrew's two days later.`
     },
     {
       club: "Manchester United",
@@ -63,6 +61,9 @@ On 27 February 2014, Lingard joined another Championship club, Brighton & Hove A
     }
   ]
 };
+
+// https://ta-dicoding-default-rtdb.asia-southeast1.firebasedatabase.app/
+fetch('https://ta-dicoding-default-rtdb.asia-southeast1.firebasedatabase.app/').then(data => data.json()).then(res => console.log(res))
 
   profileTable.innerHTML = `
     
