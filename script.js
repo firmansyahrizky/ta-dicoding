@@ -9,7 +9,17 @@ const achievementsTab = document.querySelector(".achievements-tab");
 const mainDetail = document.querySelector(".main-detail");
 const mainNavigation = document.querySelector(".main-navigation");
 const hamburgerButton = document.querySelector(".hamburger");
+const showAuthorProfileButton = document.querySelector(".show-author-profile");
+const authorProfile = document.querySelector(".author-profile");
 //ends of html elements
+
+showAuthorProfileButton.addEventListener("click", function () {
+  if (authorProfile.style.transform === "translateX(100%)") {
+    authorProfile.style.transform = "translateX(0)";
+  } else {
+    authorProfile.style.transform = "translateX(100%)";
+  }
+});
 
 hamburgerButton.addEventListener("click", function () {
   if (hamburgerButton.style.transform === "rotate(0deg)") {
@@ -198,7 +208,7 @@ buttonTabs.forEach((tab) =>
             <div class="trophy-container">
             ${playerData.achievements
               .map(
-                (achievement) => `<div class="trophy">
+                (achievement) => `<div class="trophy">  
             <h5 class="trophy-title">${achievement.title}</h5>
             <img src=${achievement.src} alt="">
         </div>`
