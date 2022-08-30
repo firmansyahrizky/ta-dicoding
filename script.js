@@ -99,11 +99,6 @@ const playerData = {
   ],
 };
 
-// https://ta-dicoding-default-rtdb.asia-southeast1.firebasedatabase.app/
-fetch("https://ta-dicoding-default-rtdb.asia-southeast1.firebasedatabase.app/")
-  .then((data) => data.json())
-  .then((res) => console.log(res));
-
 profileTable.innerHTML = `
     
     <table class="profile-table" cellspacing=0>
@@ -184,12 +179,14 @@ buttonTabs.forEach((tab) =>
         careerTab.classList.add("tab-button-active");
         achievementsTab.classList.remove("tab-button-active");
         mainDetail.innerHTML = `<section class="career">
-                        ${playerData.career.map(
-                          (timeline) => `<div class="timeline-container">
+                        ${playerData.career
+                          .map(
+                            (timeline) => `<div class="timeline-container">
                               <h2>${timeline.season} <span class='club-career'>${timeline.club}</span></h2>
                               <p>${timeline.description}</p>
                             </div>`
-                        )}
+                          )
+                          .join("")}
                     </section>`;
         break;
       case "Achievements":
@@ -199,12 +196,14 @@ buttonTabs.forEach((tab) =>
         mainDetail.innerHTML = `
         <section class="achievements">
             <div class="trophy-container">
-            ${playerData.achievements.map(
-              (achievement) => `<div class="trophy">
+            ${playerData.achievements
+              .map(
+                (achievement) => `<div class="trophy">
             <h5 class="trophy-title">${achievement.title}</h5>
             <img src=${achievement.src} alt="">
         </div>`
-            )}
+              )
+              .join("")}
             </div>
         </section>`;
         break;
