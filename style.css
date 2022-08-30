@@ -102,10 +102,10 @@ header {
   transition: transform 400ms;
 }
 
-.main-navigation li {
+.nav-link {
   list-style-type: none;
 }
-.main-navigation li:hover {
+.nav-link:hover {
   background: var(--color-gradient);
   background-clip: text;
   -webkit-background-clip: text;
@@ -332,6 +332,41 @@ button:hover {
   background: var(--color-gradient);
 }
 
+footer {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  background-color: var(--color-primary);
+  height: 100%;
+}
+
+footer .logo h4 {
+  margin-bottom: 1rem;
+}
+
+.email-input {
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  margin: 1rem 0;
+}
+
+.usefull-links-title {
+  margin-bottom: 1rem;
+}
+
+.usefull-links > li {
+  list-style-type: none;
+}
+
+.subscribe-button {
+  padding: 1rem 2rem;
+  background: var(--color-gradient);
+  border: none;
+  outline: none;
+}
+
 @media screen and (max-width: 600px) {
   .container {
     grid-template-columns: 1fr;
@@ -360,5 +395,17 @@ button:hover {
     z-index: 10000;
 
     font-size: x-large;
+  }
+
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  footer .logo p {
+    width: 300px;
   }
 }
