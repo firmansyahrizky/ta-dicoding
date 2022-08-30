@@ -36,6 +36,7 @@ html {
   background-blend-mode: multiply;
   background-position: center;
   color: var(--color-white);
+  overflow: hidden;
 }
 
 button,
