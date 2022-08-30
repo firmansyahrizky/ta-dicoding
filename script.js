@@ -7,7 +7,19 @@ const storyTab = document.querySelector(".story-tab");
 const careerTab = document.querySelector(".career-tab");
 const achievementsTab = document.querySelector(".achievements-tab");
 const mainDetail = document.querySelector(".main-detail");
+const mainNavigation = document.querySelector(".main-navigation");
+const hamburgerButton = document.querySelector(".hamburger");
 //ends of html elements
+
+hamburgerButton.addEventListener("click", function () {
+  if (hamburgerButton.style.transform === "rotate(0deg)") {
+    mainNavigation.style.transform = "translateX(0)";
+    hamburgerButton.style.transform = "rotate(45deg)";
+  } else {
+    mainNavigation.style.transform = "translateX(100%)";
+    hamburgerButton.style.transform = "rotate(0deg)";
+  }
+});
 
 const playerData = {
   name: "Jesse Lingard",
