@@ -36,7 +36,6 @@ html {
   background-blend-mode: multiply;
   background-position: center;
   color: var(--color-white);
-  overflow: hidden;
 }
 
 button,
@@ -67,6 +66,7 @@ header {
   align-items: center;
   padding: 1rem 2rem;
   background-color: var(--color-primary);
+  overflow: hidden;
 }
 
 @keyframes menu {
@@ -358,5 +358,7 @@ button:hover {
     right: 0;
     bottom: 0;
     z-index: 10000;
+
+    font-size: x-large;
   }
 }
